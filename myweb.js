@@ -1,4 +1,4 @@
-function onclicklink(){
+function onclicklink4(){
     location.href = "blog.html";
 }
 function onclicklink1(){
