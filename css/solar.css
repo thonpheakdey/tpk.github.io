@@ -1,0 +1,21 @@
+
+#inputred  > input {
+    background-color: rgba(255, 0, 0, 0.349);
+    border-radius: 19px;
+    margin-left: 10px;    
+    margin: 8px;
+    font-size: 22px;
+    color: aliceblue;
+}
+.inputsolarw{
+    width: 40%;
+    height: 50px;
+    margin-left: 10px;
+    border-radius: 12px;
+    
+}
+.inputred {
+    width: 21%;
+    height: 50px;
+}
+
