@@ -1,6 +1,3 @@
-function onclicklink4(){
-    location.href = "blog.html";
-}
 function onclicklink1(){
     location.href = "https://web.facebook.com/pheakdey.com3766";
 }

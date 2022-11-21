@@ -1,15 +1,14 @@
 .homebtn{
-    color: #1960ff;
-    font-size: 26px;
+   
     margin-top: 10px;
 }
 #homebtn{
     color: #1960ff;
-    font-size: 26px;
-    margin-top: 10px;
+    font-size: 50px;
+    margin: 10px;
 }
 #header1 {
-    width: 100%;
+    width: 95%;
     border-radius: 33px;
     padding: 14px;
     border: double;
@@ -24,14 +23,14 @@
 
 .input {
     width: 37%;
-    font-size: 26px;
+    font-size: 24px;
     height: 55px;
     border-radius: 10px;
     margin: 5px;
 }
 
 #btnCreale {
-    width: 100%;
+    width: 90%;
     height: 54px;
     margin: 15px;
 }
@@ -39,13 +38,13 @@
 
 #btnCreale>button {
     background-color: #ffee00;
-    width: 227px;
+    width: 200px;
     margin-top: -5px;
     color: blue;
-    margin-left: 130px;
+    margin-left: 90px;
     height: 65px;
     border-radius: 10px;
-    font-size: 26px;
+    font-size: 24px;
 }
 
 #headresal {
@@ -57,7 +56,7 @@
 #headresal>p {
     width: 93%;
     height: 50px;
-    font-size: 26px;
+    font-size: 24px;
     color: #1960ff;
     text-align: center;
     display: flex;
@@ -70,7 +69,7 @@
 
 
 #inputred {
-    width: 100%;
+    width: 90%;
 
 }
 
@@ -79,6 +78,40 @@
     width: 21%;
     height: 50px;
     border-radius: 9px;
-    font-size: 26px;
+    font-size: 22px;
+    margin: 3px;
+}
+#solarbtn{
+    width: 143px;
+    height: 185px;
+    margin: 2px;
+    background: url(./photo/solar.jpg);
+    color: aliceblue;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+#headerhome > p {
+    width: 90%;
+    height: 50px;
+    background: url("./photo/solarheader.jpg");
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: red;
+    font-size: 30px;
     margin: 10px;
+}
+#bodyinweb {
+    width: 100%;
+}
+#bodyinweb > button {
+    float: right;
+    float: left;
+}
+#about{
+    width: 300px;
 }
