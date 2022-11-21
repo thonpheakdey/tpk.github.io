@@ -1,0 +1,42 @@
+#solarbtn{
+    background: url("../photo/solar.jpg");
+    color: aliceblue;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+
+}
+#homesystem{
+    background: url("../photo/homesystem.png");
+    color: rgb(153, 0, 255);
+    font-size: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+#headerhome > p {
+    width: 90%;
+    height: 50px;
+    background: url("../photo/solarheader.jpg");
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: red;
+    font-size: 30px;
+    margin: 10px;
+}
+#bodyinweb >button {
+    width: 200px;
+    height: 185px;
+    margin: 10px;
+}
+#bodyinweb > button {
+    float: right;
+    float: left;
+}
+#about{
+    width: 300px;
+    margin: 10px;
+}
