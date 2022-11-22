@@ -1,3 +1,3 @@
 function onclicklink(){
-    location.href = "index.html";
+    location.href = "../index.html";
 }
