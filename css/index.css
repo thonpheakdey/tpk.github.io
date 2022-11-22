@@ -9,7 +9,7 @@
 }
 #homesystem{
     background: url("../photo/homesystem.png");
-    color: rgb(153, 0, 255);
+    color: rgb(0, 0, 0);
     font-size: 30px;
     display: flex;
     justify-content: space-around;
@@ -28,9 +28,10 @@
     margin: 10px;
 }
 #bodyinweb >button {
-    width: 200px;
+    width: 140px;
     height: 185px;
     margin: 10px;
+    font-size: 20px;
 }
 #bodyinweb > button {
     float: right;

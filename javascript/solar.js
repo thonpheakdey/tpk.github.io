@@ -157,17 +157,21 @@ window.onmousemove = function () {
     // charge controller
     {
          
-        outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+((inputsolarw / inputsolarv) * 1.3));
+        onm = outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+(inputsolarw / inputsolarv) * 1.3);
 
-        if (outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = NaN"))
+        if (onm == ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = NaN"))
         { outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = 0") }
 
-        // else{
-        //     outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+((inputsolarw / inputsolarv) * 1.3));
+        else{
+            outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+((inputsolarw / inputsolarv) * 1.3).toFixed(0));
 
-        // }
+        }
 
     }
-
+    //Inverter
+    {
+        hon = resal12*1.3;
+        outputinverter.innerText=("ទំហំ Inverter ដែលត្រូវប្រើ = "+hon.toFixed(0) + "W");
+    }
 }
 
