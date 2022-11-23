@@ -1,3 +1,8 @@
+body > div
+{
+    background-color: aqua;
+    display: flex;
+}
 #header {
     padding: 20px;
     width: 200px;
