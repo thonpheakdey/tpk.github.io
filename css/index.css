@@ -1,10 +1,11 @@
 body > div
-{
-    background-color: aqua;
+{   width: 964px;
+    background-color: rgb(255, 255, 255);
     display: flex;
 }
 #header {
     padding: 20px;
+    height: 900px;
     width: 200px;
     /* height: 900px; */
     background-color: rgb(65, 51, 255);
@@ -16,7 +17,7 @@ body > div
 
 #header>li {
     margin: 0px;
-    width: 100%;
+    width: 200px;
     height: 100px;
     font-size: 30px;
     color: #ffff;
@@ -34,4 +35,12 @@ body > div
     border-top-left-radius: 20px;
     color: red;
    
+}
+#iframe{
+    background-color: aliceblue;
+    width: 704px;
+    height: 100%;
+    border-width: unset;
+    border-style: none;
+    border-color: unset;
 }
