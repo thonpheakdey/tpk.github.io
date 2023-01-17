@@ -70,7 +70,9 @@ var x = 1;
         // console.log(x);
 
     }
+}
     // ប្រើbutton delete
+{
     function delteinputBtn() {
 
         let inputw = document.getElementById('inputw' + x);
@@ -82,9 +84,6 @@ var x = 1;
         x--
     }
 }
-
-
-
 //លទ្ធផល
 window.onmousemove = function () {
     //​ចំនួនអានុភាណសរុប

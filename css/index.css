@@ -34,8 +34,8 @@ body>div {
 
 }
 
-#iframe {
-    width: 100%;
+.iframe {
+    width: 150%;
     height: 900px;
     background-color: rgb(255, 255, 255);
     overflow-clip-margin: content-box !important;

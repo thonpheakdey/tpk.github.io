@@ -1,8 +1,8 @@
 button {
-    width: 100px;
+    margin-top: 20px;
+    width: 200px;
     height: 100px;
-}
-button :hover {
-    background-color: rgb(255, 0, 0);
-    color: blue;
+    color: rgb(255, 157, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
 }
