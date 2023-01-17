@@ -1,0 +1,8 @@
+button {
+    width: 100px;
+    height: 100px;
+}
+button :hover {
+    background-color: rgb(255, 0, 0);
+    color: blue;
+}
