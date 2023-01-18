@@ -6,8 +6,10 @@ function home() {
 function project() {
     let project = document.querySelector("iframe");
     project.src = "/html/project.html";
-    // let homer = document.getElementById("home");
-    // homer.remove();
+}
+function about() {
+    let project = document.querySelector("iframe");
+    project.src = "/html/about.html";
 }
 function onclicklink1() {
     location.href = "https://web.facebook.com/pheakdey.com3766";
