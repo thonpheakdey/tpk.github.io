@@ -38,7 +38,7 @@ body>div {
 .iframe {
     width: 150%;
     height: 1965px;
-    background-color: rgb(255, 255, 255);
+    background-image: url(../photo/D36.jpg);
     overflow-clip-margin: content-box !important;
     border-width: 0px;
     border-style: inset;
