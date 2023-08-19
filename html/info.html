@@ -1,0 +1,85 @@
+<!-- This is a simple HTML template for a website -->
+
+<html>
+<head>
+  <style>
+    /* This is the CSS code for the design of the website */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightblue;
+    }
+
+    h1 {
+      text-align: center;
+      color: white;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+    }
+
+    .social {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .social a {
+      padding: 10px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .info {
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+  <script>
+    function goTohomePage() {
+            window.location.href = "../index.html";
+        }
+  </script>
+</head>
+<body>
+  <h1>Welcome to my website</h1>
+  <div class="container">
+    <div class="social">
+      <a href="#" onclick="goTohomePage()">Home</a>
+      <!-- These are the links to the social media platforms -->
+      <a href="https://www.facebook.com"><img src="facebook.png" alt="Facebook"></a>
+      <a href="https://www.youtube.com"><img src="youtube.png" alt="YouTube"></a>
+      <a href="https://www.tiktok.com"><img src="tiktok.png" alt="TikTok"></a>
+    </div>
+    <div class="content">
+      <!-- This is the main content of the website -->
+      <div class="info">
+        <h2>Information</h2>
+        <p>This is a website that I created for fun. It has some basic information about me and my hobbies. I hope you enjoy it.</p>
+      </div>
+      <div class="info">
+        <h2>Version</h2>
+        <p>This is version 1.0 of the website. I plan to update it with more features and content in the future.</p>
+      </div>
+      <div class="info">
+        <h2>Policy</h2>
+        <p>This website does not collect any personal data from the users. It is only for educational and entertainment purposes.</p>
+      </div>
+    </div>
+    <div class="footer">
+      <!-- This is the footer of the website -->
+      <p>Created by me &copy; 2023</p>
+    </div>
+  </div>
+</body>
+</html>
