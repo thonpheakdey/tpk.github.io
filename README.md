@@ -7,3 +7,4 @@ THON PHEAKDEY WEB THANKS !
 18/01/2023/ version 1.0.0.6
 13/06/2023/ version 1.0.0.7
 19/08/2023/ version 2.0 
+22/08/2023/ version 2.1
