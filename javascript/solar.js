@@ -1,5 +1,5 @@
 function onclicklink() {
-    location.href = "../html/project.html";
+    location.href = "../index.html";
 }
 //input
 {
