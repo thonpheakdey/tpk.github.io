@@ -148,6 +148,7 @@ window.onmousemove = function () {
         //ហៅលេខ
         inputsolarw = inputsolarw.valueAsNumber;
         inputsolarv = inputsolarv.valueAsNumber;
+        numsolar = (Ppv / inputsolarw).toFixed(0);
         //គណនា
         outputn.innerText = ("សូឡាដែលត្រូវប្រើចំនួន = " + (Ppv / inputsolarw).toFixed(0));
         if (outputn.innerText == "សូឡាដែលត្រូវប្រើចំនួន = NaN") { outputn.innerText = ("សូឡាដែលត្រូវប្រើចំនួន = 1"); }
@@ -159,10 +160,10 @@ window.onmousemove = function () {
         onm = outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+(inputsolarw / inputsolarv) * 1.3);
 
         if (onm == ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = NaN"))
-        { outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = 0") }
+        { outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = 1 A") }
 
         else{
-            outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+((inputsolarw / inputsolarv) * 1.3).toFixed(0));
+            outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+(((inputsolarw*numsolar) / inputsolarv) * 1.3).toFixed(0) +"A");
 
         }
 
