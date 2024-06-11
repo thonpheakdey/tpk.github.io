@@ -1,0 +1,39 @@
+ /* This is the CSS code for the design of the website */
+ body {
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+  }
+  header h1 {
+    background-color: #171d17;
+    color: white;
+    padding-bottom: 27px;
+    padding-top: 7px;
+    text-align: center;
+    margin: 2px;
+    border-radius: 1pc;
+    height: 10px;
+}
+  h1 {
+    text-align: center;
+    color: white;
+  }
+
+  .container {
+    width: 80%;
+    margin: auto;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .info {
+    border: 1px solid black;
+    padding: 10px;
+  }
+
+  .footer {
+    text-align: center;
+    margin-top: 20px;
+  }
