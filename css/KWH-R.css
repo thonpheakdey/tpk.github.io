@@ -1,0 +1,31 @@
+#inputred  > input {
+    background-color: rgba(255, 0, 0, 0.349);
+    border-radius: 19px;
+    padding: 10px 10px ;
+    margin-left: 10px;    
+    margin: 8px;
+    font-size: 20px;
+    color: aliceblue;
+}
+#btnCreale>button {
+    background-color: #ffee00;
+    width: 200px;
+    margin-top: -5px;
+    color: blue;
+    margin-left: 90px;
+    height: 40px;
+    border-radius: 10px;
+    font-size: 24px;
+}
+.input {
+    width: 37%;
+    font-size: 24px;
+    height: 55px;
+    border-radius: 19px;
+    margin: 5px;
+    margin-left: 10px;
+}
+#rel {
+    width: 78%;
+    background-color: #ffee00;
+}

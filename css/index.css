@@ -1,48 +1,52 @@
-body>div {
-    width: 964px;
-    background-color: rgb(255, 255, 255);
-    display: flex;
+body {
+    font-family: Arial, sans-serif;
+    margin: 1;
+    padding: 0;
 }
 
-#header {
-    padding: 20px;
-    height: 40px;
-    width: 100%;
-    background-color: rgb(65, 51, 255);
-    border-radius: 20px;
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
 }
 
-#header>li {
-    margin: 0px;
-    width: 20%;
-    height: 100%;
-    font-size: 30px;
-    color: #ffff;
-    display: flex;
+nav li {
     float: left;
-    align-content: center;
-    align-items: center;
-    justify-content: center;
 }
 
-#header>li:hover {
-    background-color: rgb(255, 255, 255);
-    border-bottom-left-radius: 120px;
-    border-bottom-right-radius: 20px;
-    border-top-right-radius: 120px;
-    border-top-left-radius: 20px;
-    color: red;
-
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
-.iframe {
-    width: 150%;
-    height: 1965px;
-    background-image: url(../photo/D36.jpg);
-    overflow-clip-margin: content-box !important;
-    border-width: 0px;
-    border-style: inset;
-    border-color: initial;
-    border-image: initial;
- 
+nav li a:hover {
+    background-color: #111;
+    border-radius: 10pc;
+    width: 120px;
+}
+
+section {
+
+    padding-left: 20px;
+}
+
+#about {
+    margin: 10px;
+}
+
+#about p {
+    font-size: 20px;
+}
+
+#takbar {
+    margin: 2PX;
+
+    border-radius: 10pc;
 }

@@ -1,0 +1,10 @@
+header h1 {
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    padding-bottom: 30px;
+    padding-top: 7px;
+    text-align: center;
+    margin: 2px;
+    border-radius: 1pc;
+    height: 10px;
+}

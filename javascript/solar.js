@@ -71,7 +71,7 @@ var x = 1;
 
     }
 }
-    // ប្រើbutton delete
+// ប្រើbutton delete
 {
     function delteinputBtn() {
 
@@ -156,22 +156,21 @@ window.onmousemove = function () {
     }
     // charge controller
     {
-         
-        onm = outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+(inputsolarw / inputsolarv) * 1.3);
 
-        if (onm == ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = NaN"))
-        { outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = 1 A") }
+        onm = outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = " + (inputsolarw / inputsolarv) * 1.3);
 
-        else{
-            outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = "+(((inputsolarw*numsolar) / inputsolarv) * 1.3).toFixed(0) +"A");
+        if (onm == ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = NaN")) { outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = 1 A") }
+
+        else {
+            outputchargecontroller.innerText = ("ទំហំដែរត្រូវប្រើ charge controller គឺ  = " + (((inputsolarw * numsolar) / inputsolarv) * 1.3).toFixed(0) + "A");
 
         }
 
     }
     //Inverter
     {
-        hon = resal12*1.3;
-        outputinverter.innerText=("ទំហំ Inverter ដែលត្រូវប្រើ = "+hon.toFixed(0) + "W");
+        hon = resal12 * 1.3;
+        outputinverter.innerText = ("ទំហំ Inverter ដែលត្រូវប្រើ = " + hon.toFixed(0) + "W");
     }
 }
 
