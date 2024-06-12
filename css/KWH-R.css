@@ -8,7 +8,7 @@
     color: aliceblue;
 }
 #btnCreale>button {
-    background-color: #ffee00;
+    background-color: #fded03;
     width: 200px;
     margin-top: -5px;
     color: blue;
@@ -27,5 +27,24 @@
 }
 #rel {
     width: 78%;
-    background-color: #ffee00;
+    background-color: #ffffff;
+}
+#headresal {
+    width: 100%;
+    margin: 10px;
+}
+
+#headresal>p {
+    width: 93%;
+    height: 50px;
+    font-size: 24px;
+    color: #1960ff;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: flex-start;
+    border-radius: 30px;
+    border: dotted;
+    padding-left: 20px;
 }

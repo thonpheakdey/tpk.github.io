@@ -39,12 +39,23 @@ section {
 
 #about {
     margin: 10px;
+    overflow: hidden;
 }
 
 #about p {
     font-size: 20px;
+    width: 400px;
+    height: 300px;
 }
-
+#about div {
+    margin-left: 410px;
+    background-image: url(../photo/thonpheakdey.jpg);
+    background-size:500px 300px;
+    width: 400px;
+    height: 300px;
+    margin-top: -300px;
+    
+}
 #takbar {
     margin: 2PX;
 
