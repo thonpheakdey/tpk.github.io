@@ -1,45 +1,9 @@
-from flask import Flask, request, redirect, render_template_string
-import json
-import os
+import telebot
+BOT_TOKEN = '7474957697:AAGtc8MO3BAZZpv2Mc118CN-kECpU-Bh0Yc'
+bot = telebot.TeleBot(BOT_TOKEN)
 
-app = Flask(__name__)
-DATA_FILE = 'users.json'
+@bot.message_handler(commands=['start','hello'])
+def send_welcome(message):
+    bot.reply_to(message,"hoedy, how are you")
 
-def load_users():
-    if not os.path.exists(DATA_FILE):
-        return {}
-    with open(DATA_FILE, 'r') as file:
-        return json.load(file)
-
-def save_users(users):
-    with open(DATA_FILE, 'w') as file:
-        json.dump(users, file)
-
-@app.route('/')
-def index():
-    return render_template_string(open('index.html').read())
-
-@app.route('/register', methods=['POST'])
-def register():
-    username = request.form['username']
-    password = request.form['password']
-    users = load_users()
-    if username in users:
-        return "Username already exists. Please choose a different username."
-    users[username] = password
-    save_users(users)
-    return "Registration successful! You can now log in."
-
-@app.route('/login', methods=['POST'])
-def login():
-    username = request.form['username']
-    password = request.form['password']
-    users = load_users()
-    if username not in users:
-        return "Username not found. Please register first."
-    if users[username] != password:
-        return "Incorrect password. Please try again."
-    return "Login successful!"
-
-if __name__ == '__main__':
-    app.run(debug=True)
+bot.infinity_polling()
