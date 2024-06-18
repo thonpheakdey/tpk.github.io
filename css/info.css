@@ -1,7 +1,7 @@
  /* This is the CSS code for the design of the website */
  body {
     font-family: Arial, sans-serif;
-    background-color: lightblue;
+    background-color: rgb(255, 255, 255);
   }
   
   h1 {
@@ -11,7 +11,8 @@
 
   .container {
     width: 80%;
-    margin: auto;
+    margin-top: 29px;
+    margin-left: 10px;
   }
   .content {
     display: grid;
