@@ -3,25 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register and Login</title>
+    <title>Send Message to Telegram Bot</title>
 </head>
 <body>
-    <h2>Register</h2>
-    <form action="/register" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Register">
+    <h1>Send a Message to Telegram Bot</h1>
+    <form id="telegram-form">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
+        <button type="button" onclick="sendMessage()">Send</button>
     </form>
 
-    <h2>Login</h2>
-    <form action="/login" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br>
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login">
-    </form>
+    <script>
+        async function sendMessage() {
+            const message = document.getElementById('message').value;
+            const botToken = '5022182217:AAES4_bpZylodvvY-sOQYx_Qe7e1g6sl4eI';
+            const chatId = '-1001750140350';
+            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+
+            const response = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    chat_id: chatId,
+                    text: message
+                })
+            });
+
+            const result = await response.json();
+            if (result.ok) {
+                alert('Message sent successfully!');
+            } else {
+                alert('Failed to send message.');
+            }
+        }
+    </script>
 </body>
 </html>
