@@ -8,3 +8,9 @@ header h1 {
     border-radius: 1pc;
     height: 10px;
 }
+body {
+    font-family: Arial, sans-serif;
+    margin: 1;
+    padding: 0;
+    min-width:840px ;
+}

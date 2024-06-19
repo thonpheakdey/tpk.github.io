@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Message to Telegram Bot</title>
+    <title>Telegram Bot Form</title>
 </head>
+
 <body>
-    <h1>Send a Message to Telegram Bot</h1>
-    <form id="telegram-form">
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" cols="50"></textarea><br><br>
-        <button type="button" onclick="sendMessage()">Send</button>
+    <h1>Send Data to Telegram Bot</h1>
+    <form id="telegramForm">
+        <label for="textInput">Text Input:</label>
+        <input type="text" id="textInput" name="textInput"><br><br>
+
+        <label for="numberInput">Number Input:</label>
+        <input type="number" id="numberInput" name="numberInput"><br><br>
+
+        <label for="checkboxInput">Checkbox Input:</label>
+        <input type="checkbox" id="checkboxInput" name="checkboxInput"><br><br>
+
+        <button type="submit">Send</button>
     </form>
 
     <script>
-        async function sendMessage() {
-            const message = document.getElementById('message').value;
-            const botToken = '5022182217:AAES4_bpZylodvvY-sOQYx_Qe7e1g6sl4eI';
-            const chatId = '-1001750140350';
-            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+        const botToken = '5022182217:AAES4_bpZylodvvY-sOQYx_Qe7e1g6sl4eI';
+        const chatId = '-1001750140350'; 
+        
+        document.getElementById('telegramForm').addEventListener('submit', function (event) {
+            event.preventDefault();
 
-            const response = await fetch(url, {
+            const textInput = document.getElementById('textInput').value;
+            const numberInput = document.getElementById('numberInput').value;
+            const checkboxInput = document.getElementById('checkboxInput').checked;
+
+            const message = `Text Input: ${textInput}\nNumber Input: ${numberInput}\nCheckbox Input: ${checkboxInput ? 'Checked' : 'Unchecked'}`;
+
+            fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -29,15 +44,21 @@
                     chat_id: chatId,
                     text: message
                 })
-            });
-
-            const result = await response.json();
-            if (result.ok) {
-                alert('Message sent successfully!');
-            } else {
-                alert('Failed to send message.');
-            }
-        }
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.ok) {
+                        alert('Message sent successfully!');
+                    } else {
+                        alert('Failed to send message: ' + data.description);
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Failed to send message due to an error.');
+                });
+        });
     </script>
 </body>
+
 </html>

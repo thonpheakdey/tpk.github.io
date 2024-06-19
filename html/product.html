@@ -1,58 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Send Message to Telegram Bot</title>
     <link rel="stylesheet" type="text/css" href="../css/header.css">
     <style>
-        body{
-            margin: 20px;
-        }
-        #message-set{
+        #message-set {
             font-size: 20px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        #btnsend {
+            font-size: 20px;
+            padding: 10px 50px 10px 50px;
+            border-radius: 10px;
+            min-width: 30px;
+        }
+
+        #product {
+            width: 500px;
+            height: 600px;
+            margin-top: -185px;
+            margin-left: 320px;
+            background-image:url(../photo/tpkicon.jpg);
+        }
+
+        #data_send {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+        #send_ok{
+            margin-left: 1cqb;
+            padding: 15px 30px;
+        }
+
+        :root {
+            --button-bg-color: #160ca1;
+            --button-text-color: #ffffff;
+            --button-border-color: #2e4fb9;
+            --button-hover-bg-color: #4c19d8;
+            --button-hover-border-color: #7b807b;
+            --button-padding: 10px 50px;
+            --button-font-size: 16px;
+            --button-border-radius: 50px;
+        }
+
+        .custom-button {
+            background-color: var(--button-bg-color);
+            color: var(--button-text-color);
+            border: 2px solid var(--button-border-color);
+            padding: var(--button-padding);
+            font-size: var(--button-font-size);
+            border-radius: var(--button-border-radius);
+            cursor: pointer;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        .custom-button:hover {
+            background-color: var(--button-hover-bg-color);
+            border-color: var(--button-hover-border-color);
         }
     </style>
 </head>
+
 <body>
     <header id="header">
         <h1 onclick="onclicklink(this)" value="index.html">THON PHEAKDEY</h1>
     </header>
-    <h1>Send a Message to Telegram Bot</h1>
     <form id="telegram-form">
-        <label for="message" id="message-set">Message:</label><br><br>
-        <textarea id="message" name="message" rows="10" cols="50"></textarea><br>
-        <button type="button" onclick="sendMessage()">Send</button>
+        <div id="data_send">
+            <input id="name" class="message" name="message" placeholder="Name (ឈ្មោះ)"><br>
+            <input id="quantity" class="message" name="message" type="number" placeholder="Quantity (ចំនួន)"><br>
+            <input id="checkbox" class="message" name="message" type="checkbox"><label style="font-size: 20px;">Color Red</label><br>
+            <button id="btnsend" class="custom-button" type="button" onclick="sendMessage()">Send</button>
+            <label id="send_ok"></label>
+        </div>
+        <div id="product"></div>
     </form>
 
-    <script>
-        function onclicklink() {
-            location.href = "../index.html";
-        }
-        async function sendMessage() {
-            const message = document.getElementById('message').value;
-            const botToken = '5022182217:AAES4_bpZylodvvY-sOQYx_Qe7e1g6sl4eI';
-            const chatId = '-1001750140350';
-            const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
-
-            const response = await fetch(url, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    chat_id: chatId,
-                    text: message
-                })
-            });
-
-            const result = await response.json();
-            if (result.ok) {
-                alert('Message sent successfully!');
-            } else {
-                alert('Failed to send message.');
-            }
-        }
-    </script>
+    <script src="../javascript/product.js"></script>
 </body>
+
 </html>
