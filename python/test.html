@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Telegram Bot Form</title>
+    <title>Telegram Bot Form with Image</title>
 </head>
-
 <body>
     <h1>Send Data to Telegram Bot</h1>
     <form id="telegramForm">
@@ -19,22 +17,27 @@
         <label for="checkboxInput">Checkbox Input:</label>
         <input type="checkbox" id="checkboxInput" name="checkboxInput"><br><br>
 
+        <label for="imageInput">Image Input:</label>
+        <input type="file" id="imageInput" name="imageInput" accept="image/*"><br><br>
+
         <button type="submit">Send</button>
     </form>
 
     <script>
         const botToken = '5022182217:AAES4_bpZylodvvY-sOQYx_Qe7e1g6sl4eI';
-        const chatId = '-1001750140350'; 
-        
-        document.getElementById('telegramForm').addEventListener('submit', function (event) {
+    const chatId = '-1001750140350'; // Replace with your chat ID or the chat ID you want to send the message to
+
+        document.getElementById('telegramForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
             const textInput = document.getElementById('textInput').value;
             const numberInput = document.getElementById('numberInput').value;
             const checkboxInput = document.getElementById('checkboxInput').checked;
+            const imageInput = document.getElementById('imageInput').files[0];
 
             const message = `Text Input: ${textInput}\nNumber Input: ${numberInput}\nCheckbox Input: ${checkboxInput ? 'Checked' : 'Unchecked'}`;
 
+            // Send text message
             fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
                 method: 'POST',
                 headers: {
@@ -45,20 +48,43 @@
                     text: message
                 })
             })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('Message sent successfully!');
+                } else {
+                    alert('Failed to send message: ' + data.description);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to send message due to an error.');
+            });
+
+            // Send image
+            if (imageInput) {
+                const formData = new FormData();
+                formData.append('chat_id', chatId);
+                formData.append('photo', imageInput);
+
+                fetch(`https://api.telegram.org/bot${botToken}/sendPhoto`, {
+                    method: 'POST',
+                    body: formData
+                })
                 .then(response => response.json())
                 .then(data => {
                     if (data.ok) {
-                        alert('Message sent successfully!');
+                        alert('Image sent successfully!');
                     } else {
-                        alert('Failed to send message: ' + data.description);
+                        alert('Failed to send image: ' + data.description);
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
-                    alert('Failed to send message due to an error.');
+                    alert('Failed to send image due to an error.');
                 });
+            }
         });
     </script>
 </body>
-
 </html>
