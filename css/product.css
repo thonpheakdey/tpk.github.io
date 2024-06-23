@@ -1,0 +1,93 @@
+
+/* -----------------------------------for product ------------------------------------- */
+#product {
+    /* background-color: #aeabe0; */
+    /* height: 1000px; */
+    border-radius: 20px;
+    margin: 10px;
+    overflow: hidden;
+    float: left;
+
+}
+#product div {
+    color: #e78e28;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5%;
+}
+#product fieldset{
+    border-radius: 20PX;
+}
+#product div fieldset legend {
+    color: #0d72e6;
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5%;
+}
+#product div p {
+    color: #8d7d50;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 5%;
+}
+#imageproduct{
+    /* background-image:url(../photo/unavailable.jpg);
+    background-size:contain; */
+    border-radius: 10px;
+    /* text-align: center; */
+    width: 95%;
+    height:fit-content;
+}
+/* ----------------------------for animation product ------------------------------------ */
+#formproduct{
+    display: flex;
+    overflow: hidden;
+    /* background-color: #938eda; */
+}
+.viewproduct, .viewdatasend {
+    transition: flex 0.3s;
+            flex: 1;
+}
+/* ----------------------------for paymaent product ------------------------------------ */
+#data_send {
+    margin-top:10px;
+    font-size: 28px;
+    width: 500px;
+    overflow:hidden;
+}
+#data_send fieldset legend{
+    /* background-color: #5059e0; */
+    width: 200px;
+}
+#checkbox{
+    /* background-color: #4d0fdd; */
+    width: 90%;
+}
+#send_ok{
+    background-color: #0d72e6;
+    margin-top: -50px;
+    /* margin-left: 1cqb; */
+    padding: 15px 30px;
+    float: right;
+}
+.message {
+    width: 90%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+#btnsend {
+    font-size: 25px;
+    padding: 10px 50px 10px 50px;
+    border-radius: 10px;
+    min-width: 30px;
+    margin-top: 10px;
+    background-color: #4d0fdd;
+    color: rgb(208, 221, 233);
+}
+#btnsend:hover{
+    background-color: #5059e0;
+    color: aliceblue;
+}

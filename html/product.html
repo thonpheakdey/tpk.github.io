@@ -1,90 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Message to Telegram Bot</title>
+    <title>THON PHEAKDEY</title>
+    <link rel="shortcut icon" type="tpkicon" href="./photo/tpkicon.jpg">
+    <meta charset="-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <link rel="stylesheet" type="text/css" href="../css/header.css">
-    <style>
-        #message-set {
-            font-size: 20px;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 10px;
-            font-size: 20px;
-        }
-
-        #btnsend {
-            font-size: 20px;
-            padding: 10px 50px 10px 50px;
-            border-radius: 10px;
-            min-width: 30px;
-        }
-
-        #product {
-            width: 500px;
-            height: 600px;
-            margin-top: -185px;
-            margin-left: 320px;
-            background-image:url(../photo/tpkicon.jpg);
-        }
-
-        #data_send {
-            margin-top: 20px;
-            margin-left: 10px;
-        }
-        #send_ok{
-            margin-left: 1cqb;
-            padding: 15px 30px;
-        }
-
-        :root {
-            --button-bg-color: #160ca1;
-            --button-text-color: #ffffff;
-            --button-border-color: #2e4fb9;
-            --button-hover-bg-color: #4c19d8;
-            --button-hover-border-color: #7b807b;
-            --button-padding: 10px 50px;
-            --button-font-size: 16px;
-            --button-border-radius: 50px;
-        }
-
-        .custom-button {
-            background-color: var(--button-bg-color);
-            color: var(--button-text-color);
-            border: 2px solid var(--button-border-color);
-            padding: var(--button-padding);
-            font-size: var(--button-font-size);
-            border-radius: var(--button-border-radius);
-            cursor: pointer;
-            transition: background-color 0.3s, border-color 0.3s;
-        }
-
-        .custom-button:hover {
-            background-color: var(--button-hover-bg-color);
-            border-color: var(--button-hover-border-color);
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/product.css">
 </head>
 
 <body>
     <header id="header">
         <h1 onclick="onclicklink(this)" value="index.html">THON PHEAKDEY</h1>
     </header>
-    <form id="telegram-form">
-        <div id="data_send">
-            <input id="name" class="message" name="message" placeholder="Name (ឈ្មោះ)"><br>
-            <input id="quantity" class="message" name="message" type="number" placeholder="Quantity (ចំនួន)"><br>
-            <input id="checkbox" class="message" name="message" type="checkbox"><label style="font-size: 20px;">Color Red</label><br>
-            <button id="btnsend" class="custom-button" type="button" onclick="sendMessage()">Send</button>
-            <label id="send_ok"></label>
+    <div id="formproduct">
+        <div id="product" class="viewproduct">
+            <div id="imageproduct">
+                <img src="../photo/unavailable.jpg" alt="photo" id="imageproduct">
+            </div>
+            <div>
+                <fieldset>
+                    <legend>Document</legend>
+                    <p><h3>Sunscreen UV</h3></p>
+                    <p>Make in : Cambodia</p>
+                    <p>Size : L </p>
+                    <p>width : 100 cm</p>
+                    <p>Height : 400 cm </p>
+                    <p>Code product : P00001</p>
+                    <p>10,000+ sold </p>
+                    <p><h4>Review</h4></p>
+                    <p>this product is so good</p>
+                </fieldset>
+            </div>
         </div>
-        <div id="product"></div>
-    </form>
+        <div id="data_send" class="viewdatasend">
+            <fieldset>
+                <legend>From payment</legend>
+                <input id="name" class="message" name="message" placeholder="Name (ឈ្មោះ)"><br>
+                <input id="quantity" class="message" name="message" type="number" placeholder="Quantity (ចំនួន)"><br>
+                <fieldset id="checkbox">
+                    <legend>Size</legend>
+
+                    <input type="radio" id="kraken" name="monster" value="K" />
+                    <label for="kraken">Kraken</label><br />
+
+                    <input type="radio" id="sasquatch" name="monster" value="S" />
+                    <label for="sasquatch">Sasquatch</label><br />
+
+                    <input type="radio" id="mothman" name="monster" value="M" />
+                    <label for="mothman">Mothman</label>
+                </fieldset>
+                <button id="btnsend" class="custom-button" type="button" onclick="sendMessage()">Send</button><br>
+                <label id="send_ok"></label>
+            </fieldset>
+        </div>
+
+    </div>
 
     <script src="../javascript/product.js"></script>
 </body>

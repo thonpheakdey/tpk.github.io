@@ -1,16 +1,27 @@
 header h1 {
-    background-color: #415ee0;
+    background-color: #2012e4;
     color: rgb(255, 255, 255);
     padding-bottom: 30px;
     padding-top: 7px;
     text-align: center;
     margin: 2px;
     border-radius: 1pc;
-    height: 10px;
+    height: 20px;
 }
-body {
+header h1:hover {
+    background-color: #3e56c4;
+    color: rgb(255, 255, 255);
+    padding-bottom: 30px;
+    padding-top: 7px;
+    text-align: center;
+    margin: 2px;
+    border-radius: 1pc;
+    height: 20px;
+}
+body{
     font-family: Arial, sans-serif;
-    margin: 1;
+    /* font-size: 25px; */
     padding: 0;
     min-width:840px ;
+    /* background-color: rgb(207, 138, 48); */
 }

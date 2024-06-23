@@ -1,18 +1,69 @@
 <!DOCTYPE html>
-<html>
-
-<body>
-    <link rel="stylesheet" type="text/css" href="/css/project.css">
-</body>
-
+<html lang="en">
 <head>
-    <a href="https://www.youtube.com/channel/UCOLOpkZrNhv6mlEokxXBH6A">youtube</a>
-    <button onclick="youtube()">You Tube <br> THON PHEAKDEY</button>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Move Div Resize</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            width: 80%;
+            height: 200px;
+        }
+        .div1, .div2 {
+            transition: flex 0.3s;
+            flex: 1;
+        }
+        .div1 {
+            background-color: lightcoral;
+        }
+        .div2 {
+            background-color: lightblue;
+        }
+    </style>
 </head>
+<body>
+
+<div class="container">
+    <div class="div1" id="div1"></div>
+    <div class="div2" id="div2"></div>
+</div>
+
 <script>
-    function youtube(){
-    location.href = "https://www.youtube.com/channel/UCOLOpkZrNhv6mlEokxXBH6A"
-}
+    const div1 = document.getElementById('div1');
+    const div2 = document.getElementById('div2');
+    
+    function makeDiv1Big() {
+        div1.style.flex = '3';
+        div2.style.flex = '1';
+    }
+
+    function makeDiv2Big() {
+        div1.style.flex = '1';
+        div2.style.flex = '3';
+    }
+
+    div1.addEventListener('mousemove', makeDiv1Big);
+    div2.addEventListener('mousemove', makeDiv2Big);
+
+    document.addEventListener('mousemove', (event) => {
+        const rect1 = div1.getBoundingClientRect();
+        const rect2 = div2.getBoundingClientRect();
+        
+        if (!(rect1.left <= event.clientX && event.clientX <= rect1.right && rect1.top <= event.clientY && event.clientY <= rect1.bottom) &&
+            !(rect2.left <= event.clientX && event.clientX <= rect2.right && rect2.top <= event.clientY && event.clientY <= rect2.bottom)) {
+            div1.style.flex = '1';
+            div2.style.flex = '1';
+        }
+    });
 </script>
 
+</body>
 </html>
