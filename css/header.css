@@ -1,27 +1,24 @@
-header h1 {
+#header div {
     background-color: #2012e4;
-    color: rgb(255, 255, 255);
-    padding-bottom: 30px;
-    padding-top: 7px;
-    text-align: center;
-    margin: 2px;
+    padding: 1px;
     border-radius: 1pc;
-    height: 20px;
 }
-header h1:hover {
-    background-color: #3e56c4;
-    color: rgb(255, 255, 255);
-    padding-bottom: 30px;
-    padding-top: 7px;
-    text-align: center;
-    margin: 2px;
+#header div:hover {
+    background-color: #4b40e9;
+    padding: 1px;
     border-radius: 1pc;
-    height: 20px;
 }
+#header div h1 {
+    display: flex ;
+    color: rgb(255, 255, 255);
+    display: block;
+    text-align:center;
+}
+
 body{
     font-family: Arial, sans-serif;
     /* font-size: 25px; */
     padding: 0;
-    min-width:840px ;
+    min-width:1150px ;
     /* background-color: rgb(207, 138, 48); */
 }

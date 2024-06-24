@@ -26,7 +26,7 @@
     color: #0d72e6;
     font-size: 50px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 5%;
+    margin-left: 5%;
 }
 #product div p {
     color: #8d7d50;
@@ -53,11 +53,16 @@
             flex: 1;
 }
 /* ----------------------------for paymaent product ------------------------------------ */
-#data_send {
+#data_send  {
     margin-top:10px;
     font-size: 28px;
-    width: 500px;
+    
     overflow:hidden;
+}
+.viewdatasend{
+    /* background-color: #0d72e6; */
+    width: 500px;
+    
 }
 #data_send input {
     /* background-color: #0d72e6; */
@@ -83,7 +88,8 @@
 #checkbox fieldset{
     /* background-color: #4d0fdd; */
     display: block;
-    width:170px;
+    padding: 10px;
+    width:150px;
     float: left;
 }
 
@@ -103,7 +109,8 @@
     font-size: 20px;
 }
 #imageInput{
-    margin-top: 15px;
+    margin-left: -10px;
+    padding: 20px;
 }
 
 #btnsend {
