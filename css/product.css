@@ -9,14 +9,18 @@
     float: left;
 
 }
-#product div {
+#product div h3 {
     color: #e78e28;
     font-size: 30px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 5%;
+    /* margin-top:-5%; */
 }
 #product fieldset{
     border-radius: 20PX;
+}
+#product fieldset legend{
+    width:240px;
 }
 #product div fieldset legend {
     color: #0d72e6;
@@ -55,16 +59,37 @@
     width: 500px;
     overflow:hidden;
 }
-#data_send fieldset legend{
-    /* background-color: #5059e0; */
-    width: 200px;
+#data_send input {
+    /* background-color: #0d72e6; */
+    height: 30px;
+    font-size: 25px;
+}
+#form_input p {
+    /* background-color: #0d72e6; */
+    margin-bottom: -19px;
+    margin-top: -2px;
+
+
 }
 #checkbox{
-    /* background-color: #4d0fdd; */
-    width: 90%;
+    /* background-color: #0d72e6; */
+    height: 200px;
+    min-width: 500px;
+    overflow: hidden;
+    display: block;
+    /* display: inline; */
+    /* float: right; */
 }
+#checkbox fieldset{
+    /* background-color: #4d0fdd; */
+    display: block;
+    width:170px;
+    float: left;
+}
+
+
 #send_ok{
-    background-color: #0d72e6;
+    /* background-color: #0d72e6; */
     margin-top: -50px;
     /* margin-left: 1cqb; */
     padding: 15px 30px;
@@ -76,6 +101,9 @@
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
+}
+#imageInput{
+    margin-top: 15px;
 }
 
 #btnsend {

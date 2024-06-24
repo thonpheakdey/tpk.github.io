@@ -22,35 +22,67 @@
             <div>
                 <fieldset>
                     <legend>Document</legend>
-                    <p><h3>Sunscreen UV</h3></p>
+                    <p>
+                    <h3>Sunscreen UV</h3>
+                    </p>
                     <p>Make in : Cambodia</p>
                     <p>Size : L </p>
                     <p>width : 100 cm</p>
                     <p>Height : 400 cm </p>
                     <p>Code product : P00001</p>
                     <p>10,000+ sold </p>
-                    <p><h4>Review</h4></p>
+                    <p>
+                    <h3>Review</h3>
+                    </p>
                     <p>this product is so good</p>
                 </fieldset>
             </div>
         </div>
         <div id="data_send" class="viewdatasend">
             <fieldset>
-                <legend>From payment</legend>
-                <input id="name" class="message" name="message" placeholder="Name (ឈ្មោះ)"><br>
-                <input id="quantity" class="message" name="message" type="number" placeholder="Quantity (ចំនួន)"><br>
-                <fieldset id="checkbox">
-                    <legend>Size</legend>
+                <div id="form_input">
+                    <legend id="data_send_form">From payment</legend>
+                    <p>Name (ឈ្មោះ)</p><br>
+                    <input id="name" class="message" placeholder="Name (ឈ្មោះ)"><br>
+                    <p>Province (ខេត្ត)</p><br>
+                    <input id="Province" class="message" placeholder="Province (ខេត្ត)"><br>
+                    <p>District (ស្រុក)</p><br>
+                    <input id="District" class="message" placeholder="District (ស្រុក)"><br>
+                    <p>Commune (ឃុំ)</p><br>
+                    <input id="Commune" class="message" placeholder="Commune (ឃុំ)"><br>
+                    <p>Village (ភូមិ)</p><br>
+                    <input id="Village" class="message" placeholder="Village (ភូមិ)"><br>
+                    <p>Quantity (ចំនួន)</p><br>
+                    <input id="quantity" class="message" type="number" placeholder="Quantity (ចំនួន)"><br>
 
-                    <input type="radio" id="kraken" name="monster" value="K" />
-                    <label for="kraken">Kraken</label><br />
+                </div>
+                <div id="checkbox">
+                    <fieldset>
+                        <legend>Size</legend>
+                        <input type="radio" id="kraken" name="monster" value="K" />
+                        <label for="kraken">M</label><br />
 
-                    <input type="radio" id="sasquatch" name="monster" value="S" />
-                    <label for="sasquatch">Sasquatch</label><br />
+                        <input type="radio" id="sasquatch" name="monster" value="S" />
+                        <label for="sasquatch">F</label><br />
 
-                    <input type="radio" id="mothman" name="monster" value="M" />
-                    <label for="mothman">Mothman</label>
-                </fieldset>
+                        <input type="radio" id="mothman" name="monster" value="M" />
+                        <label for="mothman">L</label>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Color</legend>
+                        <input type="radio" id="Red" name="Yello" value="R" />
+                        <label for="Red">Red</label><br />
+
+                        <input type="radio" id="Blue" name="Yello" value="B" />
+                        <label for="Blue">Blue</label><br />
+
+                        <input type="radio" id="Yello" name="Yello" value="Y" />
+                        <label for="Yello">Yello</label>
+                    </fieldset>
+                </div>
+                <label for="imageInput">Image payment:</label>
+                <input type="file" id="imageInput" accept="image/*"><br><br>
+
                 <button id="btnsend" class="custom-button" type="button" onclick="sendMessage()">Send</button><br>
                 <label id="send_ok"></label>
             </fieldset>
