@@ -1,0 +1,23 @@
+#list_product{
+    width: 900px;
+}
+.star{
+    margin: 1px;
+    display:flex;
+    float: left;
+    background-color: aqua;
+    border-color: black;
+    width: 150px;
+    height: 200px;
+    border-radius: 10px;
+}
+.star1{
+    margin: 20px;
+    display:flex;
+    float: left;
+    background-color: rgb(15, 27, 27);
+    border-color: black;
+    width: 120px;
+    height: 160px;
+    border-radius: 10px;
+}
