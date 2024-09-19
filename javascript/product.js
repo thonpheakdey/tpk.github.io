@@ -42,7 +42,7 @@ async function sendMessage() {
     const selectedSize = document.querySelector('input[name="size"]:checked').value;
     const imageInput = document.getElementById('imageInput').files[0];
     const botToken = '5022182217:AAES4_bpZylodvvY-sOQYx_Qe7e1g6sl4eI';
-    const chatId = '-1001750140350';
+    const chatId = '1726757945';
     const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
 
     const message = `Name: ${name}\nProvince: ${province}\nDistrict: ${district}\nDommune: ${commune} \nVillage: ${village} \nQuantity: ${quantity}\nSize: ${selectedSize}\nColor: ${selectedColor} `;
