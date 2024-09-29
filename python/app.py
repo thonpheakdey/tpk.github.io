@@ -1,7 +1,7 @@
 import requests
 
 # Replace with your actual bot token
-bot_token = "5022182217:AAES4_bpZylodvvY-sOQYx_Qe7e1g6sl4eI"
+bot_token = "7474957697:AAGtc8MO3BAZZpv2Mc118CN-kECpU-Bh0Yc"
 
 # Delete the webhook
 delete_webhook_url = f"https://api.telegram.org/bot{bot_token}/deleteWebhook"

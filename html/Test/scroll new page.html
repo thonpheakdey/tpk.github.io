@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website with Taskbar</title>
+    <style>
+        /* Basic reset and taskbar styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .taskbar {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .taskbar ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .taskbar ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem;
+        }
+
+        .taskbar ul li a:hover {
+            background-color: #575757;
+            border-radius: 4px;
+        }
+
+        /* Section styling */
+        section {
+            padding: 100px;
+            height: 100vh;
+            background-color: #f4f4f4;
+            margin-bottom: 20px;
+        }
+
+        #home {
+            background-color: #ffebcd;
+        }
+
+        #calculators {
+            background-color: #e0ffff;
+        }
+
+        #products {
+            background-color: #ffe4e1;
+        }
+    </style>
+</head>
+<body>
+    <nav class="taskbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#calculators">Calculators</a></li>
+            <li><a href="#products">Products</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1>Home</h1>
+        <p>Welcome to our website!</p>
+    </section>
+
+    <section id="calculators">
+        <h1>Calculators</h1>
+        <p>Here you will find various calculators.</p>
+    </section>
+
+    <section id="products">
+        <h1>Products</h1>
+        <p>These are our products.</p>
+    </section>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
