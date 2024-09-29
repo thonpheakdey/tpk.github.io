@@ -1,5 +1,5 @@
 function onclicklink() {
-    location.href = "../index.html";
+    location.href = "/index.html";
 }
 
 const div1 = document.getElementById('product');

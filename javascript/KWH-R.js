@@ -1,8 +1,6 @@
+
 function onclicklink() {
-    location.href = "../index.html";
-}
-function onclicklink() {
-    location.href = "../index.html";
+    location.href = "/index.html";
 }
 //input
 {

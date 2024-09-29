@@ -1,10 +1,10 @@
 #header div {
-    background-color: #2012e4;
+    background-color: rgb(192, 144, 243);
     padding: 1px;
     border-radius: 1pc;
 }
 #header div:hover {
-    background-color: #4b40e9;
+    background-color: rgb(214, 184, 245);
     padding: 1px;
     border-radius: 1pc;
 }
