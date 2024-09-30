@@ -1,0 +1,48 @@
+#header{
+    background: linear-gradient(to bottom, #57a7ff, #df8ae3);
+    color: aliceblue;
+    text-align: center;
+    padding: 1rem;
+}
+#proflie_logo{
+    border-radius: 100%;
+    margin-bottom: 0.5rem;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+.text_header{
+    margin: 3px;
+}
+/* taskbar */
+#taskbar{
+    background-color: #f1ebeb;
+    color: white;
+    padding: 9px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+#taskbar button{
+    background-color: #df8ae3;
+    font: 15px sans-serif;
+    padding-inline: 40px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border-radius: 15px;  
+}
+#taskbar button :hover{
+    background-color: #e79beb;
+    font: 15px sans-serif;
+    padding-inline: 40px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+    border-radius: 15px;
+    
+}
+#taskbar button a{
+    color: #f5f5f5;
+    text-decoration: inherit;
+}
