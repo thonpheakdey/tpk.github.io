@@ -18,7 +18,15 @@
     font-size: 24px;
 }
 .input {
-    width: 37%;
+    width: 25%;
+    font-size: 24px;
+    height: 55px;
+    border-radius: 19px;
+    margin: 5px;
+    margin-left: 10px;
+}
+.inputn {
+    width: 9%;
     font-size: 24px;
     height: 55px;
     border-radius: 19px;
@@ -26,13 +34,14 @@
     margin-left: 10px;
 }
 #rel {
-    width: 78%;
+    width: 90%;
     background-color: #ffffff;
 }
 #headresal {
     width: 100%;
     margin: 10px;
 }
+
 
 #headresal>p {
     width: 93%;

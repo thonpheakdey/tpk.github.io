@@ -6,8 +6,10 @@ function onclicklink() {
 {
     let rel = document.createElement('input');
     let inputw = document.createElement('input');
+    let inputn = document.createElement('input');
     let inputh = document.createElement('input');
     let output = document.createElement('output');
+    let outputp = document.createElement('output');
 
     // let br = document.createElement('br');
     //inputw
@@ -15,6 +17,11 @@ function onclicklink() {
     inputw.placeholder = "ចំនួនអានុភាព (W)";
     inputw.id = "inputw1";
     inputw.className = "input";
+    //inputn
+    inputn.type = "number";
+    inputn.placeholder = "ចំនួន";
+    inputn.id = "inputn1";
+    inputn.className = "inputn";
     //inputh
     inputh.type = "number";
     inputh.placeholder = "ចំនួនម៉ោង (h)";
@@ -25,15 +32,22 @@ function onclicklink() {
     output.className = "input";
     output.innerText = "Wh";
     output.style.backgroundColorz = "red";
+    //outputp
+    outputp.id = "outputp1";
+    outputp.className = "input";
+    outputp.innerText = "W";
+    outputp.style.backgroundColorz = "red";
     //rel
     rel.type = "Number";
-    rel.placeholder = "ចំនួនទឹកប្រាក់ក្នុងKWH =1500 រៀល";
+    rel.placeholder = "ចំនួនទឹកប្រាក់ក្នុង kWh =1500 រៀល";
     rel.id = "rel";
     rel.className = "input";
     before.appendChild(rel);
     before.appendChild(inputw);
+    before.appendChild(inputn);
     before.appendChild(inputh);
     before.appendChild(output);
+    before.appendChild(outputp);
 
 }
 
@@ -44,14 +58,21 @@ var x = 1;
     function newinputBtn() {
         x += 1;
         let inputw = document.createElement('input');
+        let inputn = document.createElement('input');
         let inputh = document.createElement('input');
         let output = document.createElement('output');
+        let outputp = document.createElement('output');
         // let br = document.createElement('br');
         //inputw
         inputw.type = "number";
         inputw.placeholder = "ចំនួនអានុភាព (W)";
         inputw.id = "inputw" + x;
         inputw.className = "input";
+        //inputn
+        inputn.type = "number";
+        inputn.placeholder = "ចំនួន";
+        inputn.id = "inputn" + x;
+        inputn.className = "inputn";
         //inputh
         inputh.type = "number";
         inputh.placeholder = "ចំនួនម៉ោង (h)";
@@ -62,10 +83,17 @@ var x = 1;
         output.className = "input";
         output.innerText = "Wh";
         output.style.backgroundColorz = "red";
+        //output
+        outputp.id = "outputp" + x;
+        outputp.className = "input";
+        outputp.innerText = "W";
+        outputp.style.backgroundColorz = "red";
 
         before.appendChild(inputw);
+        before.appendChild(inputn);
         before.appendChild(inputh);
         before.appendChild(output);
+        before.appendChild(outputp);
         // before.appendChild(br);
         // console.log(x);
 
@@ -76,11 +104,15 @@ var x = 1;
     function delteinputBtn() {
 
         let inputw = document.getElementById('inputw' + x);
+        let inputn = document.getElementById('inputn' + x);
         let inputh = document.getElementById('inputh' + x);
         let output = document.getElementById('output' + x);
+        let outputp = document.getElementById('outputp' + x);
         inputw.remove();
+        inputn.remove();
         inputh.remove();
         output.remove();
+        outputp.remove();
         x--
     }
 }
@@ -104,9 +136,11 @@ window.onmousemove = function () {
             //ហៅId
 
             var inputwx = document.getElementById("inputw" + y);
+            var inputnx = document.getElementById("inputn" + y );
             var inputhx = document.getElementById("inputh" + y);
             var rel = document.getElementById('rel');
             out = document.getElementById("output" + y);
+            outp = document.getElementById("outputp" + y);
             allresal1 = document.getElementById("w");
             allresal = document.getElementById("wh");
             kwh = document.getElementById("KWH");
@@ -114,19 +148,23 @@ window.onmousemove = function () {
             //ហៅលេខ
 
             inputw1x = inputwx.valueAsNumber;
+            inputn1x = inputnx.valueAsNumber;
             inputh1x = inputhx.valueAsNumber;
             rel2 = rel.valueAsNumber;
             //គណនា
 
 
-            resal0255 = (inputw1x * inputh1x);
+            
+            resalw += (inputw1x * inputn1x);
+            if (inputwx.value == '' || inputnx.value == ''  ) { resal0255 = 0; rel2 = 0; }
+            resal0255 = ((inputw1x * inputn1x) * inputh1x);
             if (inputwx.value == '') { inputw1x = 0; }
-            resalw += inputw1x;
-            if (inputwx.value == '' || inputhx.value == '') { resal0255 = 0; rel2 = 0; }
             if (rel.value == '') { rel2 = 1500; }
-            resal12 += resal0255
+            resal12 += resal0255;
 
-            out.innerText = (resal0255 + "wh");
+            out.innerText = (resal0255 + "Wh");
+
+            outp.innerText = ("||​​​​​​  ​ "+(inputw1x * inputn1x) + "W");
 
 
             rel2 = resal12 / 1000 * rel2
@@ -135,7 +173,7 @@ window.onmousemove = function () {
 
             allresal1.innerText = ("​ចំនួនអានុភាណសរុប = " + resalw + "W");
             allresal.innerText = ("​ចំនួនអានុភាណក្នុងមួយម៉ោងសរុប = " + resal12 + "Wh");
-            kwh.innerText = ("​ចំនួនអានុភាណក្នុងមួយម៉ោងសរុប = " + resal12 / 1000 + "KWH");
+            kwh.innerText = ("​ចំនួនអានុភាណក្នុងមួយម៉ោងសរុប = " + resal12 / 1000 + "kWh");
             resalral.innerText = ("ចំណាយអស់" + rel2 + "រៀល")
         }
     }

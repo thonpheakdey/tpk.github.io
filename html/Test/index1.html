@@ -20,11 +20,28 @@
             <p class="text_header">Welcome to website.<br>This website has product, calculator.</p>
           </div>
           <div id="taskbar">
-            <button ><a href="#Home">Home</a></button>
+            <button ><a href="#home">Home</a></button>
             <button ><a href="#products">Products</a></button>
             <button ><a href="#Calculate">Calculate</a></button>
             <button ><a href="#About">About</a></button>
           </div>
+          <div id="home">
+            
+          </div>
+          <div id="products"></div>
+            
+          </div>
         <script src="" async defer></script>
+        <script>
+          // Smooth scrolling
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function(e) {
+                  e.preventDefault();
+                  document.querySelector(this.getAttribute('href')).scrollIntoView({
+                      behavior: 'smooth'
+                  });
+              });
+          });
+      </script>
     </body>
 </html>
