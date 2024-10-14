@@ -39,7 +39,7 @@ function onclicklink() {
     outputp.style.backgroundColorz = "red";
     //rel
     rel.type = "Number";
-    rel.placeholder = "ចំនួនទឹកប្រាក់ក្នុង kWh =1500 រៀល";
+    rel.placeholder = "ចំនួនទឹកប្រាក់ក្នុង 1 kWh =1500 រៀល";
     rel.id = "rel";
     rel.className = "input";
     before.appendChild(rel);
