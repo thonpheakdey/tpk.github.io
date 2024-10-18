@@ -1,3 +1,6 @@
+body{
+    margin: 0px;
+}
 #header {
     background: linear-gradient(to bottom, #57a7ff, #df8ae3);
     color: aliceblue;
@@ -8,10 +11,7 @@
 #proflie_logo {
     border-radius: 100%;
     margin-bottom: 0.5rem;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 100%;
-    height: auto;
+    
 }
 
 .text_header {
@@ -20,7 +20,7 @@
 
 /* taskbar */
 #taskbar {
-    background-color: #f1ebeb;
+    background-color: #f1ebeb3b;
     color: white;
     padding: 9px;
     text-align: center;
@@ -29,22 +29,17 @@
     padding: 1rem;
     position: sticky;
     top: 0;
-    width: 100%;
     z-index: 1000;
 
 }
 
 #taskbar button {
     background-color: #df8ae3;
-    /* font: 15px sans-serif; */
-    /* padding-inline: 40px; */
-    /* padding-bottom: 7px; */
     padding-top: 7px;
     border-radius: 15px;
     padding: 1rem;
     position: sticky;
     top: 0;
-    /* width: 100%; */
     z-index: 1000;
 }
 
@@ -60,13 +55,11 @@
 /* .............. .............. ............ */
 
 #home {
-    /* width: 100px; */
     height: 1000px;
     background-color: #57a7ff;
 }
 
 #products {
-    /* width: 100px; */
     height: 1000px;
     background-color: #0e2033;
 }
